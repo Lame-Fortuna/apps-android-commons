@@ -495,9 +495,7 @@ class UploadMediaDetailFragment : UploadBaseFragment(), UploadMediaDetailsContra
             return
         }
         presenter.fetchTitleAndDescription(indexOfFragment)
-        if (indexOfFragment > 0) {
-            presenter.checkImageQuality(indexOfFragment)
-        }
+        presenter.checkImageQuality(indexOfFragment)
         if (showNearbyFound) {
             if (UploadActivity.nearbyPopupAnswers!!.containsKey(nearbyPlace!!)) {
                 val response = UploadActivity.nearbyPopupAnswers!![nearbyPlace!!]!!
